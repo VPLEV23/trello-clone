@@ -29,9 +29,9 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-$(document).bind("DOMNodeRemoved", function(e) {
-  console.log("Removed: " + e.target.nodeName);
-});
+//$(document).bind("DOMNodeRemoved", function(e) {
+  //console.log("Removed: " + e.target.nodeName);
+//});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

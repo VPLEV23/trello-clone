@@ -26,7 +26,7 @@ const CreateTitle = styled.h3`
   font-size: 48px;
   color: white;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 `;
 
 const CreateInput = styled.input`
@@ -81,7 +81,7 @@ const Home = ({ boards, boardOrder, dispatch }) => {
           placeholder="Your boards title..."
           type="text"
         />
-         <CreateTitle>Created by Vald Bulgakov</CreateTitle>
+         <CreateTitle>Created by Vlad Bulgakov</CreateTitle>
       </form>
     );
   };

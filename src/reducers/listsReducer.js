@@ -41,12 +41,12 @@ const listsReducer = (state = initialState, action) => {
         type
       } = action.payload;
 
-      // draggin lists around - the listOrderReducer should handle this
+      // draggin spisok around
       if (type === "list") {
         return state;
       }
 
-      // in the same list
+      // в самому списку
       if (droppableIdStart === droppableIdEnd) {
         const list = state[droppableIdStart];
         const card = list.cards.splice(droppableIndexStart, 1);
@@ -54,16 +54,16 @@ const listsReducer = (state = initialState, action) => {
         return { ...state, [droppableIdStart]: list };
       }
 
-      // other list
+      // перенос в інший список
       if (droppableIdStart !== droppableIdEnd) {
-        // find the list where the drag happened
+        // находить список де є преміщення
         const listStart = state[droppableIdStart];
-        // pull out the card from this list
+        // вибирає карту з цього списку
         const card = listStart.cards.splice(droppableIndexStart, 1);
-        // find the list where the drag ended
+        // находить список куда падає карта
         const listEnd = state[droppableIdEnd];
 
-        // put the card in the new list
+        // ставить карту в новий список
         listEnd.cards.splice(droppableIndexEnd, 0, ...card);
         return {
           ...state,

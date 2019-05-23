@@ -16,7 +16,7 @@ const ListsContainer = styled.div`
 
 class TrelloBoard extends PureComponent {
   componentDidMount() {
-    // set actiove trello board
+    // set active trello board
     const { boardID } = this.props.match.params;
 
     this.props.dispatch(setActiveBoard(boardID));
